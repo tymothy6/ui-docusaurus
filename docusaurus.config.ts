@@ -3,8 +3,8 @@ import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
+  title: '@shadcn/ui Figma Design System',
+  tagline: 'Design system for shadcn/ui',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -15,8 +15,8 @@ const config: Config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'tymothy6', // Usually your GitHub org/user name.
+  projectName: 'ui-docusaurus', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -39,7 +39,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/tymothy6/ui-docs',
+            'https://github.com/tymothy6/ui-docusaurus',
         },
         blog: false,
       } satisfies Preset.Options,
@@ -54,9 +54,9 @@ const config: Config = {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
-      title: 'My Site',
+      title: 'shadcn/ui',
       logo: {
-        alt: 'My Site Logo',
+        alt: 'shadcn/ui',
         src: 'img/logo.svg',
       },
       items: [
@@ -67,6 +67,12 @@ const config: Config = {
           label: 'Docs',
         },
         {
+          type: 'docSidebar',
+          sidebarId: 'figmaSidebar',
+          position: 'left',
+          label: 'Figma',
+        },
+        {
           type: 'docsVersionDropdown',
           position: 'right',
         },
@@ -75,7 +81,7 @@ const config: Config = {
           position: 'right',
         },
         {
-          href: 'https://github.com/facebook/docusaurus',
+          href: 'https://github.com/tymothy6/ui-docusaurus',
           label: 'GitHub',
           position: 'right',
         },
@@ -98,7 +104,7 @@ const config: Config = {
           ],
         },
         {
-          title: 'Community',
+          title: 'Docusaurus',
           items: [
             {
               label: 'Stack Overflow',
@@ -115,20 +121,20 @@ const config: Config = {
           ],
         },
         {
-          title: 'More',
+          title: 'shadcn/ui',
           items: [
             {
-              label: 'Blog',
-              to: '/blog',
+              label: 'Website',
+              to: 'https://ui.shadcn.com',
             },
             {
               label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              href: 'https://github.com/shadcn-ui/ui',
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Built with Docusaurus.`,
     },
     hideOnScroll: true,
     prism: {
