@@ -1,11 +1,15 @@
 import {themes as prismThemes} from 'prism-react-renderer';
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
+import tailwindPlugin from './plugins/tailwind-plugin.cjs';
 
 const config: Config = {
   title: '@shadcn/ui Figma Design System',
   tagline: 'Design system for shadcn/ui',
   favicon: 'img/favicon.ico',
+
+  // Add TailwindCSS support
+  plugins: [tailwindPlugin],
 
   // Set the production url of your site here
   url: 'https://your-docusaurus-site.example.com',
@@ -65,12 +69,6 @@ const config: Config = {
           sidebarId: 'tutorialSidebar',
           position: 'left',
           label: 'Docs',
-        },
-        {
-          type: 'docSidebar',
-          sidebarId: 'figmaSidebar',
-          position: 'left',
-          label: 'Figma',
         },
         {
           type: 'docsVersionDropdown',
@@ -140,7 +138,7 @@ const config: Config = {
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
-    },
+    }
   } satisfies Preset.ThemeConfig,
 };
 
