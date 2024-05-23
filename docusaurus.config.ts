@@ -56,9 +56,9 @@ const config: Config = {
       respectPrefersColorScheme: true,
     },
     // Replace with your project's social card
-    image: 'img/docusaurus-social-card.jpg',
+    image: 'img/shadcn.png',
     navbar: {
-      title: 'shadcn/ui',
+      title: 'Figma Design System',
       logo: {
         alt: 'shadcn/ui',
         src: 'img/logo.svg',
